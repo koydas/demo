@@ -1,0 +1,4 @@
+desktop:
+  path: /apps/desktop
+mobile:
+  path: /apps/mobile

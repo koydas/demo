@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-demo",
+  "version": "1.0.0",
+  "description": "intended to show my capacities",
+  "type": "module",
+  "main": "main.js",
+  "jest": {
+    "transform": {}
+  },
+  "scripts": {
+    "init": "node .devops/.scripts/init.js",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koydas/nodejs-demo.git"
+  },
+  "author": "Stéphane Hamel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koydas/nodejs-demo/issues"
+  },
+  "homepage": "https://github.com/koydas/nodejs-demo#readme",
+  "devDependencies": {
+    "chalk": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "yaml": "^2.4.5"
+  }
+}
