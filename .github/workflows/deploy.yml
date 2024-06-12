@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Execute all tests
+        run: |
+          npm i
+          npm test
+
+      - name: Deploy on GitHub Pages
+        run: |
+          echo 'awesome deployment'
