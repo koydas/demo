@@ -9,7 +9,8 @@
   },
   "scripts": {
     "init": "node .devops/.scripts/init.js",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
+    "test-watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
