@@ -78,6 +78,7 @@ jobs:
       - name: Build with Next.js
         run: |
           cd apps/desktop
+          npm i
           npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
