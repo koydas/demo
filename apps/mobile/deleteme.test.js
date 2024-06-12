@@ -1,0 +1,1 @@
+test('dumb test - if no test it returns an error', () => {})
