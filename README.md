@@ -3,8 +3,8 @@
 This repository is to show a bit of what I can do as a developer.
 
 ### [Apps](/apps/README.md)
-- [Desktop](/apps/Desktop/README.md)
-- [Mobile](/apps/Mobile/README.md)
+- [Desktop](/apps/desktop/README.md)
+- [Mobile](/apps/mobile/README.md)
 
 ### Dependencies
 - nodejs
