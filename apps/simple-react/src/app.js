@@ -13,14 +13,14 @@ const Row = styled.tr``
 const HeaderCell = styled.th``
 const DataCell = styled.td``
 
-const users = [{
+let users = [{
   id: 1,
   first_name: 'bob',
   last_name: 'gratton'
 }]
 
-function App({}) {
-  
+function App({ }) {
+
   const [data, setData] = useState(users)
 
   function validate() {
@@ -37,26 +37,34 @@ function App({}) {
       valid = false
       last_name.classList.add('invalid')
     }
-    
+
     return valid
   }
 
   function add() {
-    if(!validate()) {
+    if (!validate()) {
       return
     }
 
-    const id = Math.max(... users.map(x => x.id)) + 1
-    
+    const id = Math.max(...users.map(x => x.id)) + 1
+
     console.log(id)
     const first_name = document.querySelector('#first_name').value
     const last_name = document.querySelector('#last_name').value
 
     users.push({ id, first_name, last_name })
-    setData([... users])
+    setData([...users])
 
     document.querySelector('#first_name').value = ''
     document.querySelector('#last_name').value = ''
+  }
+
+  function remove(e) {
+    const row = e.target.parentNode.parentNode
+    const id = row.attributes['data-id'].value
+    users = users.filter(x => x.id != id)
+
+    setData([... users.filter(x => x.id != id)])
   }
 
   return (
@@ -76,14 +84,17 @@ function App({}) {
         </thead>
 
         <tbody>
-        {
-          data.map(({ id, first_name, last_name }) => <Row key={id}>
-            <DataCell>{id}</DataCell>
-            <DataCell>{first_name}</DataCell>
-            <DataCell>{last_name}</DataCell>
-          </Row>
-          )
-        }
+          {
+            data.map(({ id, first_name, last_name }) => <Row key={id} data-id={id}>
+              <DataCell>{id}</DataCell>
+              <DataCell>{first_name}</DataCell>
+              <DataCell>{last_name}</DataCell>
+              <DataCell>
+                <Button onClick={remove}>Remove</Button>
+              </DataCell>
+            </Row>
+            )
+          }
         </tbody>
 
       </Table>
