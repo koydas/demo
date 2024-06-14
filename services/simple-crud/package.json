@@ -1,0 +1,25 @@
+{
+  "name": "simple-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koydas/nodejs-demo.git"
+  },
+  "author": "Stephane hamel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koydas/nodejs-demo/issues"
+  },
+  "homepage": "https://github.com/koydas/nodejs-demo#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
