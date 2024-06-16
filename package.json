@@ -10,7 +10,8 @@
   "scripts": {
     "init": "node .devops/.scripts/init.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
-    "test-watch": "npm test -- --watch"
+    "test-watch": "npm test -- --watch",
+    "apps:simple-react:build": "cd apps/simple-react && npm run build"
   },
   "repository": {
     "type": "git",

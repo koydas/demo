@@ -7,6 +7,7 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "npm run pre-build && webpack --mode production",
+    "pre-build": "",
     "start-services": "cd ../../services/simple-crud && npm start",
     "test": "jest"
   },
