@@ -1,16 +1,28 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
 
+
 const Input = styled.input`
 &.invalid {
   border-color: red;
 }`
 
-const Button = styled.button``
+const Button = styled.button`
+font-family: "Roboto", sans-serif;
+padding: .25em 1em;
+background-color: lightblue;
+border-color: #82a2ad;
+border-radius: .5em;
+color: white;
+
+`
 
 const Table = styled.table``
+
 const Row = styled.tr``
+
 const HeaderCell = styled.th``
+
 const DataCell = styled.td``
 
 let users = [{
