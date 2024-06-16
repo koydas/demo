@@ -11,7 +11,7 @@
     "init": "node .devops/.scripts/init.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "test-watch": "npm test -- --watch",
-    "apps:simple-react:build": "cd apps/simple-react && npm run build"
+    "apps:simple-react:build": "cd apps/simple-react && npm install && npm run build"
   },
   "repository": {
     "type": "git",
