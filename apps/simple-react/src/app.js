@@ -15,7 +15,7 @@ function App({ }) {
   function add() {
     if (!validate_form()) return
 
-    const user = get_user()
+    const user = get_user(users)
     users.push(user)
 
     setData([...users])
