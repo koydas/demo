@@ -12,4 +12,8 @@ export const Button = styled.button`
 export const ButtonLight = styled.span`
     font-size: smaller;
     cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
 `
