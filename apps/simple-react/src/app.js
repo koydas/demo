@@ -1,44 +1,34 @@
 import React, { useState } from 'react';
 import { AppWrapper, Content, TopButtons } from './app.styles.js'
-import { Button, ButtonLight } from './components/forms/buttons.js'
-import { Input } from './components/forms/input.js'
-import {Form} from './components/forms/form.js'
-import { DataCell, HeaderCell, Row, Table, THead, TBody } from './components/table/table.js'
 import { validate_user } from './components/validators/user-validator.js'
 
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faAdd, faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import UsersTable from './components/users/table/users_table.js';
+import UserForm, { get_user, resetForm } from './components/users/form/form.js'
 
-let users = [{
-  id: 1,
-  first_name: 'bob',
-  last_name: 'gratton'
-}]
+import users_data from './components/users/users.json'
+
+let users = users_data
+
+function validate() {
+  const first_name_input = document.querySelector('#first_name')
+  const last_name_input = document.querySelector('#last_name')
+
+  return validate_user({ first_name_input, last_name_input })
+}
 
 function App({ }) {
 
   const [data, setData] = useState(users)
 
   function add() {
-    if (!validate_user({
-      first_name_input: document.querySelector('#first_name'),
-      last_name_input: document.querySelector('#last_name')
-    })) {
-      return
-    }
+    if (!validate()) return
 
-    const id = users.length <= 0
-    ? 1 
-    : Math.max(...users.map(x => x.id)) + 1
+    const user = get_user()
+    users.push(user)
 
-    const first_name = document.querySelector('#first_name').value
-    const last_name = document.querySelector('#last_name').value
-
-    users.push({ id, first_name, last_name })
     setData([...users])
 
-    document.querySelector('#first_name').value = ''
-    document.querySelector('#last_name').value = ''
+    resetForm()
   }
 
   function remove(e) {
@@ -56,41 +46,11 @@ function App({ }) {
   return (
     <AppWrapper>
       <TopButtons>
-        <Form id="add-user" onSubmit={add}>
-          <Input id='first_name' placeholder='first name' />
-          <Input id='last_name' placeholder='last name' />
-          
-          <Button><Icon icon={faAdd} /></Button>
-        </Form>
+        <UserForm add={add}/>
       </TopButtons>
 
       <Content>
-        <Table>
-          <THead>
-            <Row>
-              <HeaderCell key="header-id">Id</HeaderCell>
-              <HeaderCell key="header-first-name">First Name</HeaderCell>
-              <HeaderCell key="header-last-name">Last Name</HeaderCell>
-              <HeaderCell key="header-last-name"></HeaderCell>
-            </Row>
-
-          </THead>
-
-          <TBody>
-            {
-              data.map(({ id, first_name, last_name }) => <Row key={id} data-id={id}>
-                <DataCell>{id}</DataCell>
-                <DataCell>{first_name}</DataCell>
-                <DataCell>{last_name}</DataCell>
-                <DataCell>
-                  <ButtonLight onClick={remove}><Icon icon={faTrashCan} style={{ fontSize: 'smaller' }} /></ButtonLight>
-                </DataCell>
-              </Row>
-              )
-            }
-          </TBody>
-
-        </Table>
+        <UsersTable data={data} remove={remove} />
       </Content>
     </AppWrapper>
   );
