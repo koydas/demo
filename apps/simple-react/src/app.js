@@ -24,7 +24,7 @@ function App({ }) {
   }
 
   function remove(e) {
-    const row = e.target.parentNode.parentNode
+    const row = e.target.closest('tr')
     const id = row.attributes['data-id'].value
 
     if (!id)
