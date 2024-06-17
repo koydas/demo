@@ -27,4 +27,6 @@ export const HeaderCell = styled.th`
 
 export const DataCell = styled.td`
     text-align: left;
+    padding: .25em 1em;
+    font-size: small;
 `

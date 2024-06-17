@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { AppWrapper, Content, TopButtons } from './app.styles.js'
-import { Button } from './components/forms/buttons.js'
-import { DataCell, HeaderCell, Row, Table, THead, TBody } from './components/table/table.js'
+import { Button, ButtonLight } from './components/forms/buttons.js'
 import { Input } from './components/forms/input.js'
+import {Form} from './components/forms/form.js'
+import { DataCell, HeaderCell, Row, Table, THead, TBody } from './components/table/table.js'
 import { validate_user } from './components/validators/user-validator.js'
 
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
@@ -55,9 +56,12 @@ function App({ }) {
   return (
     <AppWrapper>
       <TopButtons>
-        <Input id='first_name' placeholder='first name' />
-        <Input id='last_name' placeholder='last name' />
-        <Button onClick={add}><Icon icon={faAdd} /></Button>
+        <Form id="add-user" onSubmit={add}>
+          <Input id='first_name' placeholder='first name' />
+          <Input id='last_name' placeholder='last name' />
+          
+          <Button><Icon icon={faAdd} /></Button>
+        </Form>
       </TopButtons>
 
       <Content>
@@ -79,7 +83,7 @@ function App({ }) {
                 <DataCell>{first_name}</DataCell>
                 <DataCell>{last_name}</DataCell>
                 <DataCell>
-                  <Button onClick={remove}><Icon icon={faTrashCan} style={{ fontSize: 'smaller' }} /></Button>
+                  <ButtonLight onClick={remove}><Icon icon={faTrashCan} style={{ fontSize: 'smaller' }} /></ButtonLight>
                 </DataCell>
               </Row>
               )

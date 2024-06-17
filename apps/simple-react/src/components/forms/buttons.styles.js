@@ -8,3 +8,8 @@ export const Button = styled.button`
     border-radius: .5em;
     color: white;
 `
+
+export const ButtonLight = styled.span`
+    font-size: smaller;
+    cursor: pointer;
+`
