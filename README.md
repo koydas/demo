@@ -1,5 +1,5 @@
 [![Tests](https://github.com/koydas/nodejs-demo/actions/workflows/tests.yml/badge.svg)](https://github.com/koydas/nodejs-demo/actions/workflows/tests.yml)
-[![Deploy Next.js site to Pages](https://github.com/koydas/nodejs-demo/actions/workflows/deploy.yml/badge.svg)](https://github.com/koydas/nodejs-demo/actions/workflows/deploy.yml)
+[![Deploy static content to Pages](https://github.com/koydas/demo/actions/workflows/static.yml/badge.svg)](https://github.com/koydas/demo/actions/workflows/static.yml)
 
 # nodejs-demo
 This repository is to show a bit of what I can do as a developer.
