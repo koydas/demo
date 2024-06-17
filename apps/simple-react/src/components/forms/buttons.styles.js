@@ -9,10 +9,13 @@ export const Button = styled.button`
     color: white;
 `
 
-export const ButtonLight = styled.span`
+export const ButtonLight = styled.button`
     font-size: smaller;
     cursor: pointer;
+    background: transparent;
+    color: white;
 
+    border: 0;
     &:hover {
         opacity: 0.7;
     }
