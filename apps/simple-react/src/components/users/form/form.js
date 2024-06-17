@@ -1,10 +1,12 @@
 import React from "react"
-import { Button } from "../../forms/buttons.js"
+import { ButtonLight } from "../../forms/buttons.js"
 import { Form } from "../../forms/form.js"
-import { Input } from "../../forms/input.styles.js"
-import { faAdd } from "@fortawesome/free-solid-svg-icons"
+import { Input } from "../../forms/input.js"
+import { faAdd, faUser } from "@fortawesome/free-solid-svg-icons"
 import { validate_user } from '../../validators/user-validator.js'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Add_user from "../icons/add_user.js"
+import AddUser from "../icons/add_user.js"
 
 export function validate_form() {
     const first_name_input = document.querySelector('#first_name')
@@ -42,7 +44,9 @@ const UserForm = ({ add }) =>
         <Input id='first_name' placeholder='first name' />
         <Input id='last_name' placeholder='last name' />
 
-        <Button><FontAwesomeIcon icon={faAdd} /></Button>
+        <ButtonLight>
+            <AddUser />
+        </ButtonLight>
     </Form>
 
 export default UserForm
