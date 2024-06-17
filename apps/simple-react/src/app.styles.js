@@ -13,8 +13,7 @@ export const AppWrapper = styled.div`
 `
 
 export const TopButtons = styled.div`
-margin: auto;
-width: 80%;
+
 padding: 2em;
 
 > * {

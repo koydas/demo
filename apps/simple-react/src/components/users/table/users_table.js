@@ -4,8 +4,6 @@ import { DataCell, HeaderCell, Row, TBody, THead, Table } from "../../table/tabl
 import { faCancel, faPen, faSave, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { Input } from '../../forms/input.styles.js';
 
-
-
 const UsersTable = ({ data, remove }) => {
     const [editMode, setEditMode] = useState(false)
 
@@ -18,9 +16,7 @@ const UsersTable = ({ data, remove }) => {
         
         user.first_name = first_name
         user.last_name = last_name
-
-        console.log(user)
-
+        
         setEditMode(!editMode)
     }
 
