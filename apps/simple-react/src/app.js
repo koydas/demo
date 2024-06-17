@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import styled from 'styled-components'
+import { AppWrapper } from './app.styles.js'
 import { Button } from './components/forms/buttons.js'
-import { DataCell, HeaderCell, Row, Table } from './components/table/table.js'
+import { DataCell, HeaderCell, Row, Table, THead, TBody } from './components/table/table.js'
 import { Input } from './components/forms/input.js'
 import { validate_user } from './components/validators/user-validator.js'
+
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faAdd, faRemove } from '@fortawesome/free-solid-svg-icons'
 
 let users = [{
   id: 1,
@@ -43,37 +46,38 @@ function App({ }) {
   }
 
   return (
-    <div>
+    <AppWrapper>
       <Input id='first_name' placeholder='first name' />
       <Input id='last_name' placeholder='last name' />
-      <Button onClick={add}>Add</Button>
+      <Button onClick={add}><Icon icon={faAdd} /></Button>
 
       <Table>
-        <thead>
+        <THead>
           <Row>
             <HeaderCell key="header-id">Id</HeaderCell>
             <HeaderCell key="header-first-name">First Name</HeaderCell>
             <HeaderCell key="header-last-name">Last Name</HeaderCell>
+            <HeaderCell key="header-last-name"></HeaderCell>
           </Row>
 
-        </thead>
+        </THead>
 
-        <tbody>
+        <TBody>
           {
             data.map(({ id, first_name, last_name }) => <Row key={id} data-id={id}>
               <DataCell>{id}</DataCell>
               <DataCell>{first_name}</DataCell>
               <DataCell>{last_name}</DataCell>
               <DataCell>
-                <Button onClick={remove}>Remove</Button>
+                <Button onClick={remove}><Icon icon={faRemove} /></Button>
               </DataCell>
             </Row>
             )
           }
-        </tbody>
+        </TBody>
 
       </Table>
-    </div>
+    </AppWrapper>
   );
 }
 

@@ -1,3 +1,3 @@
-import { DataCell, HeaderCell, Row, Table } from './table.styles.js'
+import { DataCell, HeaderCell, Row, Table, THead, TBody } from './table.styles.js'
 
-export { DataCell, HeaderCell, Row, Table }
+export { DataCell, HeaderCell, Row, Table, THead, TBody }
