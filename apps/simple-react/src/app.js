@@ -24,7 +24,6 @@ function App({ }) {
 
     const id = Math.max(...users.map(x => x.id)) + 1
 
-    console.log(id)
     const first_name = document.querySelector('#first_name').value
     const last_name = document.querySelector('#last_name').value
 
