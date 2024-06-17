@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppWrapper, Content, TopButtons } from './app.styles.js'
 import { Button } from './components/forms/buttons.js'
 import { DataCell, HeaderCell, Row, Table, THead, TBody } from './components/table/table.js'
+import { DataCell, HeaderCell, Row, Table, THead, TBody } from './components/table/table.js'
 import { Input } from './components/forms/input.js'
 import { validate_user } from './components/validators/user-validator.js'
 
