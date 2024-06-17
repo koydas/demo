@@ -1,27 +1,19 @@
 import React, { useState } from 'react';
 import { AppWrapper, Content, TopButtons } from './app.styles.js'
-import { validate_user } from './components/validators/user-validator.js'
 
 import UsersTable from './components/users/table/users_table.js';
-import UserForm, { get_user, resetForm } from './components/users/form/form.js'
+import UserForm, { get_user, resetForm, validate_form } from './components/users/form/form.js'
 
 import users_data from './components/users/users.json'
 
 let users = users_data
-
-function validate() {
-  const first_name_input = document.querySelector('#first_name')
-  const last_name_input = document.querySelector('#last_name')
-
-  return validate_user({ first_name_input, last_name_input })
-}
 
 function App({ }) {
 
   const [data, setData] = useState(users)
 
   function add() {
-    if (!validate()) return
+    if (!validate_form()) return
 
     const user = get_user()
     users.push(user)
