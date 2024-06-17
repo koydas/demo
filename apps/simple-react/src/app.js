@@ -1,29 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
-
-
-const Input = styled.input`
-&.invalid {
-  border-color: red;
-}`
-
-const Button = styled.button`
-font-family: "Roboto", sans-serif;
-padding: .25em 1em;
-background-color: lightblue;
-border-color: #82a2ad;
-border-radius: .5em;
-color: white;
-
-`
-
-const Table = styled.table``
-
-const Row = styled.tr``
-
-const HeaderCell = styled.th``
-
-const DataCell = styled.td``
+import { Button } from './components/forms/buttons.js'
+import { DataCell, HeaderCell, Row, Table } from './components/table/table.js'
+import { Input } from './components/forms/input.js'
+import { validate_user } from './components/validators/user-validator.js'
 
 let users = [{
   id: 1,
@@ -35,26 +15,10 @@ function App({ }) {
 
   const [data, setData] = useState(users)
 
-  function validate() {
-    let valid = true
-
-    const first_name = document.querySelector('#first_name')
-    if (!first_name.value) {
-      valid = false
-      first_name.classList.add('invalid')
-    }
-
-    const last_name = document.querySelector('#last_name')
-    if (!last_name.value) {
-      valid = false
-      last_name.classList.add('invalid')
-    }
-
-    return valid
-  }
-
   function add() {
-    if (!validate()) {
+    if (!validate_user({
+                          first_name_input: document.querySelector('#first_name'),
+                          last_name_input: document.querySelector('#last_name') })) {
       return
     }
 
