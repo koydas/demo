@@ -1,1 +1,3 @@
-export default () => <span>test mobile</span>
+const MobilePage = () => <span>test mobile</span>
+
+export default MobilePage

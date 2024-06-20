@@ -1,21 +1,22 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import React from 'react'
 
-export const LinkMobile = (): JSX.Element => <Link href='/mobile'>Mobile</Link>
-export const LinkDesktop = (): JSX.Element => <Link href='/desktop'>Desktop</Link>
+export const LinkMobile: React.FC = () => <Link href='/mobile'>Mobile</Link>
+export const LinkDesktop: React.FC = () => <Link href='/desktop'>Desktop</Link>
 
 const List = styled.ul``
 const Item = styled.li``
 
-const Home = (): JSX.Element =>
+const Home: React.FC = () => (
   <List>
     <Item>
-      <LinkMobile />
+      <LinkMobile></LinkMobile>
     </Item>
     <Item>
-      <LinkDesktop />
+      <LinkDesktop></LinkDesktop>
     </Item>
   </List>
-
+)
 
 export default Home
