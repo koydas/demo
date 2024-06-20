@@ -1,11 +1,21 @@
 import Link from 'next/link'
+import styled from 'styled-components'
 
 export const LinkMobile = () => <Link href='/mobile'>Mobile</Link>
-export const LinkDesktop = () => <a href='/desktop'>Desktop</a>
+export const LinkDesktop = () => <Link href='/desktop'>Desktop</Link>
 
-export default function Home() {
-  return <>
-    <LinkMobile />
-    <LinkDesktop />
-  </>
-}
+const List = styled.ul``
+const Item = styled.li``
+
+const Home = ({}) =>
+  <List>
+    <Item>
+      <LinkMobile />
+    </Item>
+    <Item>
+      <LinkDesktop />
+    </Item>
+  </List>
+
+
+export default Home
