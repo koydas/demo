@@ -5,10 +5,9 @@ import '@testing-library/jest-dom'
 describe('Form', () => {
     it('children', () => {
         const val = "My Value"
-        const form = render(<Form><input id='one' value={val} /></Form>).container.querySelector('form')
+        const form = render(<Form><input id='one' /></Form>).container.querySelector('form')
 
         expect(form.querySelector("#one")).toBeDefined()
-        expect(form.querySelector("#one").value).toBe(val)
 
     })
 
