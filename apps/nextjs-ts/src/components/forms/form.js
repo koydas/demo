@@ -15,3 +15,5 @@ function _onSubmit(e, callback) {
 }
 
 export const Form = ({ children, onSubmit }) => <FormStyled onSubmit={e => _onSubmit(e, onSubmit)}>{children}</FormStyled>
+
+export default Form
