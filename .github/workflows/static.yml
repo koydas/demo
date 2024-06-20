@@ -31,7 +31,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Tests
-        run: npm run apps:simple-react:test
+        run: npm run demo:test
       - name: Build
         run: npm run apps:simple-react:build
       - name: Setup Pages

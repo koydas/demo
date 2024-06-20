@@ -8,8 +8,9 @@
     "transform": {}
   },
   "scripts": {
-    "demo:start": "npm run apps:simple-react:start",
-    "demo:test": "npm run apps:simple-react:test",
+    "demo:build": "npm run apps:nextjs-ts:build",
+    "demo:start": "npm run apps:nextjs-ts:start",
+    "demo:test": "npm run apps:nextjs-ts:test",
     "init": "node .devops/.scripts/init.js",
     "test-watch": "npm test -- --watch",
     "apps:nextjs-ts:build": "cd apps/nextjs-ts && npm i && npm run build",
