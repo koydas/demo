@@ -16,5 +16,4 @@ jobs:
 
       - name: Execute all tests
         run: |
-          npm i
-          npm test
+          npm run demo:test
