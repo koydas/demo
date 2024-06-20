@@ -12,6 +12,9 @@
     "demo:test": "npm run apps:simple-react:test",
     "init": "node .devops/.scripts/init.js",
     "test-watch": "npm test -- --watch",
+    "apps:nextjs-ts:build": "cd apps/nextjs-ts && npm i && npm run build",
+    "apps:nextjs-ts:test": "cd apps/nextjs-ts && npm i && npm run test",
+    "apps:nextjs-ts:start": "cd apps/nextjs-ts && npm i && npm run dev",
     "apps:simple-react:build": "cd apps/simple-react && npm install && npm run build",
     "apps:simple-react:start": "cd apps/simple-react && npm install && npm run start",
     "apps:simple-react:test": "cd apps/simple-react && npm install && npm run test"
