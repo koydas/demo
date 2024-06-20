@@ -11,10 +11,14 @@ describe('Button', () => {
     })
     
     it('click', () => {
-        const click = (e) => console.log(e)
+        let clicked = false
+        const click = () => { clicked = true }
         const { container } = render(<Button onClick={click}>{button_text}</Button>)
         
-        expect(container.innerHTML).toMatch(button_text)
+        expect(clicked).toBe(false)
+        container.querySelector('button').click()
+
+        expect(clicked).toBe(true)
     })
 
     it('styles', () => {
@@ -23,15 +27,23 @@ describe('Button', () => {
 })
 
 describe('ButtonLight', () => {
-    it('children', () => {
-        const text = "Add light Stuff"
-        const { container } = render(<ButtonLight>{text}</ButtonLight>)
+    const button_text = "Add light Stuff"
 
-        expect(container.innerHTML).toMatch(text)
+    it('children', () => {
+        const { container } = render(<ButtonLight>{button_text}</ButtonLight>)
+
+        expect(container.innerHTML).toMatch(button_text)
     })
     
     it('click', () => {
-        // TODO
+        let clicked = false
+        const click = () => { clicked = true }
+        const { container } = render(<ButtonLight onClick={click}>{button_text}</ButtonLight>)
+        
+        expect(clicked).toBe(false)
+        container.querySelector('button').click()
+
+        expect(clicked).toBe(true)
     })
 
     it('styles', () => {
