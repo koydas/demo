@@ -4,14 +4,9 @@
 
 ## roadmap.sh projects
 ### Frontend
-#### [cookie-consent](https://github.com/koydas/cookie-consent)
-Accept Cookies prompt.
-
-#### [roadmap.sh-projects-accordion](https://github.com/koydas/roadmap.sh-projects-accordion)
-Simple accordeon in vanilla js.
-
-#### [datepicker-ui](https://github.com/koydas/datepicker-ui)
-Simple datepicker in vanilla js.
+- [cookie-consent](https://github.com/koydas/cookie-consent)
+- [roadmap.sh-projects-accordion](https://github.com/koydas/roadmap.sh-projects-accordion)
+- [datepicker-ui](https://github.com/koydas/datepicker-ui)
 
 ## Spoken languages
 French and English.
