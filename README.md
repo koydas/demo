@@ -13,4 +13,4 @@ This repository is to show a bit of what I can do as a developer.
 #### Frontend
 - [cookie-consent](https://github.com/koydas/cookie-consent)
 - [roadmap.sh-projects-accordion](https://github.com/koydas/roadmap.sh-projects-accordion)
-- [https://github.com/koydas/datepicker-ui](datepicker-ui)
+- [datepicker-ui](https://github.com/koydas/datepicker-ui)
