@@ -2,7 +2,7 @@
 - [roadmap.sh](https://roadmap.sh/u/koydas)
 - [LinkedIn](www.linkedin.com/in/stéphane-hamel)
 
-## roadmap.sh projects
+## [roadmap.sh projects]([roadmap.sh](https://roadmap.sh/u/koydas))
 ### Frontend
 - [cookie-consent](https://github.com/koydas/cookie-consent)
 - [roadmap.sh-projects-accordion](https://github.com/koydas/roadmap.sh-projects-accordion)
