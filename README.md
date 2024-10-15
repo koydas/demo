@@ -1,7 +1,7 @@
 ## Social Medias
 - [roadmap.sh](https://roadmap.sh/u/koydas)
 - [LinkedIn](www.linkedin.com/in/stéphane-hamel)
-
+- [itch.io](https://koydas.itch.io/)
 ## [roadmap.sh projects](https://roadmap.sh/u/koydas)
 ### Frontend
 - [cookie-consent](https://github.com/koydas/cookie-consent)
