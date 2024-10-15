@@ -14,7 +14,7 @@
 
 ### Video Games
 #### MonoGame
-- (Laser beams pew pew)[https://github.com/koydas/gamecodeurgamejam20/blob/master/README.md]
+- [Laser beams pew pew](https://github.com/koydas/gamecodeurgamejam20/blob/master/README.md)
 - [Brick Breaker](https://github.com/koydas/brickbreaker)
 #### Game Maker
 - [Jo Bines Adventures](https://github.com/koydas/jo-bines-adventures/)
