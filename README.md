@@ -2,6 +2,7 @@
 - [roadmap.sh](https://roadmap.sh/u/koydas)
 - [LinkedIn](www.linkedin.com/in/stéphane-hamel)
 - [itch.io](https://koydas.itch.io/)
+
 ## [roadmap.sh projects](https://roadmap.sh/u/koydas)
 ### Frontend
 - [cookie-consent](https://github.com/koydas/cookie-consent)
@@ -11,9 +12,14 @@
 ### DevOps
 - [roadmap.sh-projects-multiservice-docker](https://github.com/koydas/roadmap.sh-projects-multiservice-docker)
   
+
+
+
+## Others
+### Backend
 #### C#
 - [Code Crawler](https://github.com/koydas/Code-Crawler)
-
+  
 ### Video Games
 #### MonoGame
 - [Laser beams pew pew](https://github.com/koydas/gamecodeurgamejam20/blob/master/README.md)
